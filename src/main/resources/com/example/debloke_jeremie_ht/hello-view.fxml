@@ -1,16 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.debloke_jeremie_ht.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.debloke_jeremie_ht.HelloController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="388.0" style="-fx-background-color: rgb(204, 204, 255);">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="8.0" layoutX="70.0" layoutY="28.0" lineSpacing="2.0" prefHeight="58.0" prefWidth="250.0" style="-fx-background-color: rgb(96, 130, 182);" text="Debloke.sa" textFill="#ebe1e1" underline="true" AnchorPane.bottomAnchor="304.0" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="69.0" AnchorPane.topAnchor="28.0">
+               <font>
+                  <Font name="Microsoft JhengHei" size="34.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="388.0" prefHeight="400.0" prefWidth="315.0">
+         <children>
+            <Label alignment="CENTER" graphicTextGap="10.0" layoutX="60.0" layoutY="75.0" lineSpacing="10.0" prefHeight="43.0" prefWidth="189.0" text="Connection" underline="true">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField id="username field" fx:id="username" layoutX="29.0" layoutY="145.0" prefHeight="37.0" prefWidth="250.0" promptText="username" style="-fx-background-color: rgb(182, 208, 226); -fx-border-radius: 5 5 0 0;">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </TextField>
+            <PasswordField id="password-field" fx:id="password" layoutX="29.0" layoutY="200.0" prefHeight="37.0" prefWidth="250.0" promptText="password" style="-fx-background-color: rgb(182, 208, 226);">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </PasswordField>
+            <Button id="connectionButton" fx:id="authButton" alignment="CENTER" layoutX="89.0" layoutY="252.0" mnemonicParsing="false" onAction="#authUser" prefHeight="28.0" prefWidth="140.0" style="-fx-border-radius: 10 10 10 10; -fx-background-color: rgb(135, 206, 235);" text="Connection">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
